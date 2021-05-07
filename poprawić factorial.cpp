@@ -4,7 +4,7 @@
 using namespace std;
 
 long long factorial(int number){
-    if(number==1) return 1;
+    if(number<2) return 1;
     number= number * factorial(number-1);
 }
 
