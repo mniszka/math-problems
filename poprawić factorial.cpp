@@ -1,19 +1,25 @@
-//problem z liczbami 111, 1111 itd. -> wychodzi 0
+//problem z większymi liczbami >20 --> wychodzi liczba ujemna
+//liczby >65 --> wychodzi 0
 
 #include <iostream>
+
 using namespace std;
 
 long long factorial(int number){
-    if(number<2) return 1;
-    number= number * factorial(number-1);
+
+    if(number ==1) return 1;
+    return number * factorial(number-1);
 }
 
 int main()
 {
-    int number;
-   cout<<"Put a number"<<endl;
+int number;
+for(;;){
+   cout<<"Put a number bigger than 0 and smaller than 21"<<endl;
    cin>> number;
-   cout<< factorial(number);
+   cout<< number << "!:  "<<factorial(number)<<endl;
+}
    return 0;
 
 }
+
