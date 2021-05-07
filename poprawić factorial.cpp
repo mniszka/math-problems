@@ -1,3 +1,5 @@
+//problem z liczbami 111, 1111 itd. -> wychodzi 0
+
 #include <iostream>
 using namespace std;
 
