@@ -39,9 +39,4 @@ cout<<"How many: " <<count<<endl;
 
 }
         
-  }
-  }
-cout<<"How many: " <<count<<endl;
-//cout<<"numbers: "<<
 
-}
