@@ -6,9 +6,7 @@ using namespace std;
 
 int main(){
   
-  int f=1;
-  int g=1;
-  int count=0;
+  int f=1, g=1, count=0;
   int pow9[10] ={};
   int pow3[10]={};
   
