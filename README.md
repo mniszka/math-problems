@@ -10,8 +10,9 @@
 7. absolute value
 8. algebraic expressions
 9. sequances, limit of a sequence, geometric series
-10. analytic geometry
-11. arc measure
+10. geometry
+11. analytic geometry
+12. arc measure
 
 # higher mathematics:
 1. limit of a function
