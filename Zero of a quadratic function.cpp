@@ -1,4 +1,4 @@
-//Find zeros of the function (what are values of x): y =x^2 + 5 x+ 6
+//Find zeros of the function (what are values of x): y = x^2 + 5 x+ 6
 
 #include <iostream>
 #include <conio.h>
