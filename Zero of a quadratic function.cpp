@@ -55,8 +55,7 @@ switch(number_of_x){
 case 0: cout<<"no zeros";
 break;
 
-case 1:
-cout<< -b/2*a;
+case 1: cout<< -b/2*a;
 break;
 
 case 2: {
