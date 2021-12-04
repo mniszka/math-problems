@@ -7,7 +7,7 @@
 4. binomial expansion formulas
 5. equations and inequalities: linear, quadratic, trigonometric, simultaneous equations 
 6. functions: linear, quadratic, rational, homographic, logarithmic
-7. absolute value
+7. statistics: absolute value. arithmetic mean, weighted mean, geometric mean, harmonic mean, root mean square, ...
 8. algebraic expressions
 9. sequances, limit of a sequence, geometric series
 10. geometry
