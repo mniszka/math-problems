@@ -17,5 +17,5 @@
 # higher mathematics:
 1. limit of a function
 2. derivative
-3. 
+3. matrices
 
