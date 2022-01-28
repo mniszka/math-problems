@@ -1,5 +1,6 @@
 
 //angles of a triangle
+//S.153 INNE ROZWIĄZANIE
 
 
 #include <iostream>
@@ -26,26 +27,30 @@ bool if_regular(){
    else return false;
 };
 
-//radians to degrees:
+//conversion radians to degrees:
 float rad_to_degree(float rad){
   return (rad*180/PI);
 };
 
-//regular triangle:
-void regular(float x, float y){ 
-  alpha = atan(x/y); //arcus tangens
-  alpha = rad_to_degree(alpha);
+//if it is a regular triangle:
+void regular(float a, float b){ 
+  alpha = rad_to_degree(atan(a/b)); //arcus tangens
+  
   float beta = 90-alpha;
   cout<< "This is a regular triangle."<<endl;
   cout<< "alpha: "<< alpha<< ", beta: "<<beta<< ", gamma: "<< 180-alpha - beta;
 
 };
 
-//not a regular triangle:
-double not_regular(){
-  alpha=2;
+//if it is not a regular triangle:
+void not_regular(float a, float b, float c){
+  float beta, gamma;
 
-  return alpha;
+ alpha = rad_to_degree(cos((a*a-b*b-c*c)/2*b*c));
+ beta = rad_to_degree(cos((b*b-a*a-c*c)/2*a*c));
+ gamma= rad_to_degree(cos((c*c-a*a-b*b)/2*a*b));
+
+  cout<< "alpha: "<< alpha<< ", beta: "<<beta<< ", gamma: "<< 180-alpha - beta;
 
 };
 
@@ -79,7 +84,7 @@ if(sides[0]> sides[1]) swap(sides[0], sides[1]);
      regular(sides[0], sides[1]);
    }
    else {
-     cout<<not_regular();
+     not_regular(sides[0], sides[1], sides[2]);
    }
 
   }
