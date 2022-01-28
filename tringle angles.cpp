@@ -1,6 +1,4 @@
-
 //angles of a triangle
-//S.153 INNE ROZWIĄZANIE
 
 
 #include <iostream>
@@ -46,9 +44,9 @@ void regular(float a, float b){
 void not_regular(float a, float b, float c){
   float beta, gamma;
 
- alpha = rad_to_degree(cos((a*a-b*b-c*c)/2*b*c));
- beta = rad_to_degree(cos((b*b-a*a-c*c)/2*a*c));
- gamma= rad_to_degree(cos((c*c-a*a-b*b)/2*a*b));
+  alpha  = rad_to_degree(acos((b*b+c*c-a*a)/(2*b*c)));
+  beta  = rad_to_degree(acos((c*c+a*a-b*b)/(2*c*a)));
+  gamma = rad_to_degree(acos((a*a+b*b-c*c)/(2*a*b)));
 
   cout<< "alpha: "<< alpha<< ", beta: "<<beta<< ", gamma: "<< 180-alpha - beta;
 
@@ -68,15 +66,12 @@ int main()
    cout<<" c = ";
    cin>>c;
   float sides[] = {a,b,c};
-  //cout<<sides[0]/sides[1]; //działa
+
 
  //sorting sides of a triangle:
 if(sides[0]> sides[1]) swap(sides[0], sides[1]);
 if(sides[1]> sides[2]) swap(sides[1], sides[2]);
 if(sides[0]> sides[1]) swap(sides[0], sides[1]);
-
-//cout<<sides[1]<<endl;//wychodzi 4 zamiast 4.0
-
 
 
   if(if_triangle() == true){
@@ -91,10 +86,5 @@ if(sides[0]> sides[1]) swap(sides[0], sides[1]);
   else cout<<"This is not a triangle";
 
 
-
-
-   
-
-   
+  return 0;
 }
-
