@@ -1,15 +1,15 @@
 
 //angles of a triangle
-//dokończyc
 
 
 #include <iostream>
 #include <cmath>
-#define PI 3.1415926535897932
+#define PI 3.141
 using namespace std;
 
-int a,b,c, hypotenuse;
-double result, sinus_alpha, sinus_beta;
+float a,b,c;
+float alpha;
+float sides[] = {a,b,c};
 
 bool if_triangle(){
 if((a+b>c && b+c>a && a+c>b) && a>0 && b>0 && c>0){
@@ -26,27 +26,26 @@ bool if_regular(){
    else return false;
 };
 
-//finding a hypotenuse- przeciwprostokątna
-int hypotenuse(){
-if(a>b && a>c) hypotenuse= a;
-if (b>a && b>c) hypotenuse = b;
-if(c>a && c>b) hypotenuse = c;
-}
+//radians to degrees:
+float rad_to_degree(float rad){
+  return (rad*180/PI);
+};
 
-//regular triangle
-double regular(){
-  sinus_alpha = sin()
-  result = 1;
-
-  return result;
+//regular triangle:
+void regular(float x, float y){ 
+  alpha = atan(x/y); //arcus tangens
+  alpha = rad_to_degree(alpha);
+  float beta = 90-alpha;
+  cout<< "This is a regular triangle."<<endl;
+  cout<< "alpha: "<< alpha<< ", beta: "<<beta<< ", gamma: "<< 180-alpha - beta;
 
 };
 
-//not a regular triangle
+//not a regular triangle:
 double not_regular(){
-  result=2;
+  alpha=2;
 
-  return result;
+  return alpha;
 
 };
 
@@ -57,15 +56,27 @@ int main()
    cout<<"Put 3 sides of a triangle"<<endl;
    cout<<" a = ";
    cin>>a;
+
    cout<<" b = ";
    cin>>b;
+   
    cout<<" c = ";
    cin>>c;
+  float sides[] = {a,b,c};
+  //cout<<sides[0]/sides[1]; //działa
 
- 
+ //sorting sides of a triangle:
+if(sides[0]> sides[1]) swap(sides[0], sides[1]);
+if(sides[1]> sides[2]) swap(sides[1], sides[2]);
+if(sides[0]> sides[1]) swap(sides[0], sides[1]);
+
+//cout<<sides[1]<<endl;//wychodzi 4 zamiast 4.0
+
+
+
   if(if_triangle() == true){
    if( if_regular() == true){
-     cout<<regular();
+     regular(sides[0], sides[1]);
    }
    else {
      cout<<not_regular();
@@ -73,6 +84,8 @@ int main()
 
   }
   else cout<<"This is not a triangle";
+
+
 
 
    
