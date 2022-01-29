@@ -1,4 +1,5 @@
 //angles of a triangle
+//poprawić
 
 
 #include <iostream>
@@ -7,8 +8,8 @@
 using namespace std;
 
 float a,b,c;
-float alpha;
-float sides[] = {a,b,c};
+float alpha; //do poprawy
+float sides[] = {a,b,c}; //do poprawy
 
 bool if_triangle(){
 if((a+b>c && b+c>a && a+c>b) && a>0 && b>0 && c>0){
@@ -34,7 +35,7 @@ float rad_to_degree(float rad){
 void regular(float a, float b){ 
   alpha = rad_to_degree(atan(a/b)); //arcus tangens
   
-  float beta = 90-alpha;
+  float beta = 90-alpha; //do poprawy
   cout<< "This is a regular triangle."<<endl;
   cout<< "alpha: "<< alpha<< ", beta: "<<beta<< ", gamma: "<< 180-alpha - beta;
 
@@ -42,13 +43,13 @@ void regular(float a, float b){
 
 //if it is not a regular triangle:
 void not_regular(float a, float b, float c){
-  float beta, gamma;
+  float beta, gamma; //do poprawy
 
   alpha  = rad_to_degree(acos((b*b+c*c-a*a)/(2*b*c)));
   beta  = rad_to_degree(acos((c*c+a*a-b*b)/(2*c*a)));
-  gamma = rad_to_degree(acos((a*a+b*b-c*c)/(2*a*b)));
+  gamma = rad_to_degree(acos((a*a+b*b-c*c)/(2*a*b))); 
 
-  cout<< "alpha: "<< alpha<< ", beta: "<<beta<< ", gamma: "<< 180-alpha - beta;
+  cout<< "alpha: "<< alpha<< ", beta: "<<beta<< ", gamma: "<< gamma;
 
 };
 
@@ -65,7 +66,7 @@ int main()
    
    cout<<" c = ";
    cin>>c;
-  float sides[] = {a,b,c};
+  float sides[] = {a,b,c}; //do poprawy
 
 
  //sorting sides of a triangle:
