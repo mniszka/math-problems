@@ -1,27 +1,26 @@
 //check whether the sequence is arithmetic or geometric
 
+
 #include <iostream>
 using namespace std;
 
-int a,b,c;
-
-char checkingSequence(){
+char checkingSequence(int a, int b, int c){
 if(b-a == c-b){
 
-   int r=b-a;
+   int difference=b-a; 
    cout<<"arithmetic sequence"<<endl;
     cout<<"the next numbers of the sequence are: "<<endl;
-   for(int i=c+r; i<=c+r*5; i=i+r){
+   for(int i=c+difference; i<=c+difference*5; i=i+difference){
      cout<<i<<", ";
    }
 }
 
 else
 if(b/a == c/b){
-   int d=b/a;
+   int quotient=b/a; 
   cout<<"geometric sequence"<<endl;
     cout<<"the next numbers of the sequence are: "<<endl;
-   for(int i=c*d; i<=c*d*10; i=i*d){
+   for(int i=c*quotient; i<=c*quotient*10; i=i*quotient){
      cout<<i<<", ";
 }
 }
@@ -29,11 +28,11 @@ if(b/a == c/b){
 }
 
 int main(){
+int a,b,c;
 //put 3 first numbers
 cout<<"Put first three numbers of the sequence"<<endl;
 cin>>a>>b>>c;
-checkingSequence();
+checkingSequence(a,b,c);
 
-
+return 0;
 }
-
