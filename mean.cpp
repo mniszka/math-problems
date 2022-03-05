@@ -5,16 +5,19 @@ int main() {
 
 int numbers[3]= {1,5,3};
 int sum=0;
-int arr_length= sizeof(numbers)/4;
+int array_length = sizeof(numbers)/4;
 
-for(int i=0; i<arr_length; i++){
+for(int i=0; i<array_length; i++){
   sum += numbers[i];
 }
 
 //arithmetic mean
-double arithm_mean = sum/arr_length;
+double arithmetic_mean = sum/array_length;
+  
+//geometric mean
+//square it away
 
-cout<<"Arithmetic mean: "<<arithm_mean<<endl;
-cout<< "Geometric mean: "<<geom_mean;
+cout<<"Arithmetic mean: "<<arithmetic_mean<<endl;
+cout<< "Geometric mean: "<<geometric_mean;
 return 0;
 } 
