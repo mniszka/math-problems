@@ -9,16 +9,16 @@ Instead of using an equation of motion I'll write a simple for loop as below */
 using namespace std;
 
 int main() {
-  int t=0; //thief time
-  int p=-30; //policeman time
+  int thiefTime=0; 
+  int policemanTime=-30; 
 
-  for(t, p; t>p; t+=4, p+=6)
+  for(thiefTime, policemanTime; thiefTime>p; thiefTime+=4, policemanTime+=6)
   { 
     
    }
-  p=p+30;
-  cout<<t;
-  cout<<p;
+  policemanTime=policemanTime+30;
+  cout<<thiefTime;
+  cout<<policemanTime;
   
 
 } 
