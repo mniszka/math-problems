@@ -1,4 +1,4 @@
-//first soltion (without pointers):
+//first solution (without pointers):
 
 #include <iostream>
 using namespace std;
